@@ -1,82 +1,83 @@
-# **Proyecto: Análisis de Eficacia de Operadores — CallMeMaybe**
+# **Project: CallMeMaybe Operator Efficiency Analysis**
 
-Este proyecto se centra en el análisis de datos para identificar operadores ineficaces en el servicio de telefonía virtual CallMeMaybe. A través de un análisis exploratorio de datos (EDA) y pruebas estadísticas, se evalúan métricas clave como tasas de llamadas perdidas, tiempos de espera prolongados y proporción de llamadas salientes por operador. El objetivo es proporcionar a los supervisores información para mejorar la eficiencia operativa y la calidad del servicio.
+This project focuses on data analysis to identify ineffective operators in the CallMeMaybe virtual phone service. Through Exploratory Data Analysis (EDA) and statistical testing, key metrics such as missed call rates, prolonged wait times, and the proportion of outgoing calls per operator are evaluated. The goal is to provide supervisors with information to improve operational efficiency and service quality.
 
-**Objetivo**
+**Objective**
 
-El proyecto se estructura en las siguientes fases principales:
+The project is structured into the following main phases:
 
-1. **Validación y Limpieza de Datos:** Preparar y validar los datasets de llamadas y clientes.
-2. **Análisis de Calidad de Datos:** Evaluar la integridad y distribución de los datos.
-3. **Análisis Exploratorio de Datos:** Explorar distribuciones, tendencias y métricas por operador.
-4. **Identificación de Operadores Ineficaces:** Clasificar operadores basados en criterios de ineficacia.
-5. **Análisis Detallado de Operadores:** Profundizar en el rendimiento de operadores específicos.
-6. **Pruebas de Hipótesis Estadísticas:** Validar diferencias estadísticamente significativas.
-7. **Conclusiones y Recomendaciones:** Sintetizar hallazgos y proponer estrategias de intervención.
+1. **Data Validation and Cleaning:** Prepare and validate the call and client datasets.
+2. **Data Quality Analysis:** Evaluate data integrity and distribution.
+3. **Exploratory Data Analysis:** Explore distributions, trends, and metrics by operator.
+4. **Identification of Ineffective Operators:** Classify operators based on inefficiency criteria.
+5. **Detailed Operator Analysis:** Delve into the performance of specific operators.
+6. **Statistical Hypothesis Testing:** Validate statistically significant differences.
+7. **Conclusions and Recommendations:** Synthesize findings and propose intervention strategies.
 
-**🛠️ Tecnologías Utilizadas**
+**🛠️ Technologies Used**
 
-* **Python:** Lenguaje principal para el análisis de datos.
-* **Pandas:** Para la manipulación, limpieza y agregación de datos.
-* **NumPy:** Para operaciones numéricas y manejo de arrays.
-* **Matplotlib y Seaborn:** Para la visualización de datos, incluyendo gráficos de distribución, boxplots y análisis por operador.
-* **SciPy:** Para la realización de pruebas estadísticas (prueba de Mann-Whitney U).
-* **Jupyter Notebook:** Entorno interactivo para el desarrollo del análisis.
+* **Python:** Primary language for data analysis.
+* **Pandas:** For data manipulation, cleaning, and aggregation.
+* **NumPy:** For numerical operations and array handling.
+* **Matplotlib and Seaborn:** For data visualization, including distribution plots, boxplots, and per-operator analysis.
+* **SciPy:** For conducting statistical tests (Mann-Whitney U test).
+* **Jupyter Notebook:** Interactive environment for developing the analysis.
 
-**Pasos Clave**
+**Key Steps**
 
-1. **Validación y Limpieza de Datos:**
-   - Se cargaron los datasets `telecom_dataset_new.csv` (registros de llamadas) y `telecom_clients_us.csv` (información de clientes).
-   - Se realizó limpieza de datos, conversión de tipos y filtrado por período relevante.
+1. **Data Validation and Cleaning:**
+   - Loaded the `telecom_dataset_new.csv` (call records) and `telecom_clients_us.csv` (client information) datasets.
+   - Performed data cleaning, type conversion, and filtering by the relevant period.
 
-2. **Análisis de Calidad de Datos:**
-   - Se evaluó la distribución de llamadas por operador, dirección y tipo.
-   - Se verificó la integridad de los datos y se identificaron valores atípicos.
+2. **Data Quality Analysis:**
+   - Evaluated the distribution of calls by operator, direction, and type.
+   - Verified data integrity and identified outliers.
 
-3. **Análisis Exploratorio de Datos:**
-   - Se exploraron métricas como duración de llamadas, tiempos de espera y tasas de pérdida.
-   - Se visualizaron distribuciones y tendencias temporales.
+3. **Exploratory Data Analysis:**
+   - Explored metrics such as call duration, wait times, and missed call rates.
+   - Visualized distributions and temporal trends.
 
-4. **Identificación de Operadores Ineficaces:**
-   - Se definieron criterios: alta tasa de llamadas perdidas, tiempo de espera prolongado, baja proporción de llamadas salientes.
-   - Se clasificaron operadores en eficaces e ineficaces.
+4. **Identification of Ineffective Operators:**
+   - Defined criteria: high missed call rate, prolonged wait time, low proportion of outgoing calls.
+   - Classified operators as effective or ineffective.
 
-5. **Análisis Detallado de Operadores:**
-   - Se analizó el rendimiento de operadores individuales, incluyendo estadísticas descriptivas.
-   - Se identificaron patrones de ineficacia.
+5. **Detailed Operator Analysis:**
+   - Analyzed individual operator performance, including descriptive statistics.
+   - Identified inefficiency patterns.
 
-6. **Pruebas de Hipótesis Estadísticas:**
-   - Se aplicó la prueba de Mann-Whitney U para comparar grupos eficaces e ineficaces.
-   - Se evaluó la significancia estadística de las diferencias.
+6. **Statistical Hypothesis Testing:**
+   - Applied the Mann-Whitney U test to compare effective and ineffective groups.
+   - Evaluated the statistical significance of differences.
 
-7. **Conclusiones y Recomendaciones:**
-   - Se sintetizaron hallazgos y se propusieron estrategias de intervención priorizadas.
+7. **Conclusions and Recommendations:**
+   - Synthesized findings and proposed prioritized intervention strategies.
 
-**Resultados**
+**Results**
 
-El análisis revela que:
+The analysis reveals that:
 
-- **Calidad de Datos:** Datasets limpios con registros de llamadas y clientes, cubriendo un período específico.
-- **Identificación de Ineficaces:** 505 operadores (61.2% de la fuerza laboral) clasificados como ineficaces, basados en criterios de pérdida alta, espera prolongada, inconsistencia y baja salida.
-- **Hallazgos Clave:** Riesgo de proceso (inconsistencia) afecta a 206 operadores; riesgo de servicio (tiempos) a 206; riesgo severo (múltiples problemas) a 147.
-- **Top 10 de Riesgo:** Operadores con mayor ineficacia, dominados por inconsistencia extrema y tiempos de espera prolongados (hasta 1,007s).
-- **Validación Estadística:** Prueba de Mann-Whitney U confirma diferencias significativas (p ≈ 0.0000).
-- **Recomendaciones:** Estrategia segmentada: coaching inmediato para top 10, capacitación grupal para 147 de alto riesgo, auditoría para baja salida. Próximos pasos incluyen monitoreo post-intervención y ajuste de umbrales.
+- **Data Quality:** Clean datasets with call records and clients, covering a specific period.
+- **Ineffective Identification:** 505 operators (61.2% of the workforce) classified as ineffective, based on criteria of high loss, prolonged wait, inconsistency, and low output.
+- **Key Findings:** Process risk (inconsistency) affects 206 operators; service risk (times) affects 206; severe risk (multiple issues) affects 147.
+- **Top 10 Risk:** Operators with the highest inefficiency, dominated by extreme inconsistency and prolonged wait times (up to 1,007s).
+- **Statistical Validation:** Mann-Whitney U test confirms significant differences (p ≈ 0.0000).
+- **Recommendations:** Segmented strategy: immediate coaching for the top 10, group training for the 147 high-risk individuals, and audit for low output. Next steps include post-intervention monitoring and threshold adjustment.
 
-**Cómo Ejecutar el Proyecto**
+**How to Run the Project**
 
-1. Clona este repositorio en tu máquina local.
+1. Clone this repository to your local machine.
    ```bash
    git clone (https://github.com/ferchi4/Proyecto_spring_13)
+   ```
 
-2. Asegúrate de tener instaladas las dependencias necesarias:
+2. Ensure you have the necessary dependencies installed:
    ```bash
    pip install pandas numpy matplotlib seaborn scipy jupyter
    ```
 
-3. Coloca los archivos de datos (`telecom_dataset_new.csv`, `telecom_clients_us.csv`) en el mismo directorio que el notebook.
+3. Place the data files (`telecom_dataset_new.csv`, `telecom_clients_us.csv`) in the same directory as the notebook.
 
-4. Abre y ejecuta el archivo `Proy_Operadores.ipynb` en Jupyter Notebook.
+4. Open and execute the `Proy_Operadores.ipynb` file in Jupyter Notebook.
    ```bash
    jupyter notebook Proy_Operadores.ipynb
    ```
